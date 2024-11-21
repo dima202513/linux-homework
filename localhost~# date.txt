@@ -1,0 +1,183 @@
+localhost:~# date
+Thu Nov 21 08:48:29 UTC 2024
+localhost:~# date >> rt.txt
+localhost:~# cat rt.txt
+Thu Nov 21 08:48:46 UTC 2024
+localhost:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root              5120000   2417704   2702296  47% /
+devtmpfs                 93464         0     93464   0% /dev
+tmpfs                    93620         8     93612   0% /run
+none                     93620         0     93620   0% /dev/shm
+localhost:~# df /
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root              5120000   2417704   2702296  47% /
+localhost:~# df / >> rt.txt
+localhost:~# cat rt.txt
+Thu Nov 21 08:48:46 UTC 2024
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root              5120000   2417704   2702296  47% /
+localhost:~# history
+   0 date
+   1 date >> rt.txt
+   2 cat rt.txt
+   3 df
+   4 df /
+   5 df / >> rt.txt
+   6 cat rt.txt
+   7 history
+localhost:~# history | tail -5
+   4 df /
+   5 df / >> rt.txt
+   6 cat rt.txt
+   7 history
+   8 history | tail -5
+localhost:~# history | tail -5 >> rt.txt
+localhost:~#  
+Upload files 
+
+
+localhost:~# date
+Thu Nov 21 08:48:29 UTC 2024
+localhost:~# date >> rt.txt
+localhost:~# cat rt.txt
+Thu Nov 21 08:48:46 UTC 2024
+localhost:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root              5120000   2417704   2702296  47% /
+devtmpfs                 93464         0     93464   0% /dev
+tmpfs                    93620         8     93612   0% /run
+none                     93620         0     93620   0% /dev/shm
+localhost:~# df /
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root              5120000   2417704   2702296  47% /
+localhost:~# df / >> rt.txt
+localhost:~# cat rt.txt
+Thu Nov 21 08:48:46 UTC 2024
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root              5120000   2417704   2702296  47% /
+localhost:~# history
+   0 date
+processor       : 0
+vendor_id       : AuthenticX86
+ 
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+localhost:~# history
+   0 date
+   1 date >> rt.txt
+   2 cat rt.txt
+   3 df
+   4 df /
+   5 df / >> rt.txt
+   6 cat rt.txt
+   7 history
+   8 history | tail -5
+   9 history | tail -5 >> rt.txt
+  10 pwd
+  11 cat /proc/cpuinfo
+  12 cat /proc/cpuinfo >> file.txt
+  13 ls
+  14 vi file.txt
+  15 history
+localhost:~# ps
+PID   USER     TIME  COMMAND
+    1 root      0:01 {init} /bin/sh /sbin/init
+    2 root      0:00 [kthreadd]
+    3 root      0:00 [kworker/0:0]
+    4 root      0:00 [kworker/0:0H]
+    5 root      0:00 [kworker/u2:0]
+    6 root      0:00 [mm_percpu_wq]
+    7 root      0:00 [ksoftirqd/0]
+    8 root      0:00 [kdevtmpfs]
+    9 root      0:00 [oom_reaper]
+   10 root      0:00 [writeback]
+   11 root      0:00 [kcompactd0]
+   12 root      0:00 [crypto]
+   13 root      0:00 [bioset]
+   14 root      0:00 [kblockd]
+   15 root      0:00 [kworker/0:1]
+   16 root      0:00 [kswapd0]
+   17 root      0:00 [bioset]
+   34 root      0:00 [khvcd]
+   35 root      0:00 [bioset]
+   36 root      0:00 [bioset]
+   37 root      0:00 [bioset]
+   38 root      0:00 [bioset]
+   39 root      0:00 [bioset]
+   40 root      0:00 [bioset]
+   41 root      0:00 [bioset]
+   42 root      0:00 [bioset]
+   55 root      0:00 settime -d /
+   56 root      0:00 dhcpcd -q
+   61 root      0:00 sh -l
+   62 root      0:00 [kworker/u2:1]
+  122 root      0:00 ps
+localhost:~# ps | tail +2 | wc -l
+33
+localhost:~# ps | tail +2 | wc -l >> rt.txt
+localhost:~# ls
+bench.py    file.txt    hello.c     hello.js    readme.txt  rt.txt
+localhost:~# history
+   0 date
+   1 date >> rt.txt
+   2 cat rt.txt
+   3 df
+   4 df /
+   5 df / >> rt.txt
+   6 cat rt.txt
+   7 history
+   8 history | tail -5
+   9 history | tail -5 >> rt.txt
+  10 pwd
+  11 cat /proc/cpuinfo
+  12 cat /proc/cpuinfo >> file.txt
+  13 ls
+  14 vi file.txt
+  15 history
+  16 ps
+  17 ps | tail +2 | wc -l
+  18 ps | tail +2 | wc -l >> rt.txt
+  19 ls
+  20 history
+localhost:~#  
+Upload files 
+© 2011-2021 Fabrice Bellard - News - VM list - FAQ - Technical notes
