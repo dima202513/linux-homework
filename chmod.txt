@@ -1,0 +1,53 @@
+
+~
+~
+~
+localhost:~# df
+Filesystem           1K-blocks      Used Available Use% Mounted on
+/dev/root              5120000   2417704   2702296  47% /
+devtmpfs                 93464         0     93464   0% /dev
+tmpfs                    93620         8     93612   0% /run
+none                     93620         0     93620   0% /dev/shm
+localhost:~# df -h | head -n 3
+Filesystem                Size      Used Available Use% Mounted on
+/dev/root                 4.9G      2.3G      2.6G  47% /
+devtmpfs                 91.3M         0     91.3M   0% /dev
+localhost:~# df -h | head -n 3 >> /tmp/file.txt
+localhost:~# chmod
+BusyBox v1.31.1 () multi-call binary.
+ 
+Usage: chmod [-Rcvf] MODE[,MODE]... FILE...
+ 
+Each MODE is one or more of the letters ugoa, one of the
+symbols +-= and one or more of the letters rwxst
+ 
+        -R      Recurse
+        -c      List changed files
+        -v      List all files
+        -f      Hide errors
+localhost:~# chmod u-r
+BusyBox v1.31.1 () multi-call binary.
+ 
+Usage: chmod [-Rcvf] MODE[,MODE]... FILE...
+ 
+Each MODE is one or more of the letters ugoa, one of the
+symbols +-= and one or more of the letters rwxst
+ 
+        -R      Recurse
+        -c      List changed files
+        -v      List all files
+        -f      Hide errors
+localhost:~# chmod u-r /tmp/file.txt
+localhost:~# chmod o+x /tmp/file.txt
+localhost:~# chmod g+w /tmp/file.txt
+localhost:~# history
+   0 vi /tmp/file.txt
+   1 df
+   2 df -h | head -n 3
+   3 df -h | head -n 3 >> /tmp/file.txt
+   4 chmod
+   5 chmod u-r
+   6 chmod u-r /tmp/file.txt
+   7 chmod o+x /tmp/file.txt
+   8 chmod g+w /tmp/file.txt
+   9 history
