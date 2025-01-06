@@ -1,0 +1,64 @@
+[ec2-user@ip-172-31-33-20 dima2024]$ vim sleeper.sh
+echo hello world
+
+for run in {1..10}
+do
+  date +"%H:%M:%S"
+  ps -ef | sed '1d' | wc -l
+  sleep 0.2
+  cat /etc/os-release | grep "NAME=" | awk '{print $1, $2}' | head -1
+  cat /etc/os-release | grep "NAME=" | awk '{print $1}' | head -1 | sed 's/NAME="//g'
+done
+
+mkdir -p /opt/081024_morning/dima2024/50files
+
+for run in {50..100}
+do
+  touch /opt/081024_morning/dima2024/50files/$run.txt
+done
+
+echo "exit"
+[ec2-user@ip-172-31-33-20 dima2024]$ chmod +x sleeper.sh
+[ec2-user@ip-172-31-33-20 dima2024]$ ./sleeper.sh
+hello world
+13:33:19
+107
+NAME="Amazon Linux"
+Amazon
+13:33:20
+107
+NAME="Amazon Linux"
+Amazon
+13:33:20
+107
+NAME="Amazon Linux"
+Amazon
+13:33:20
+107
+NAME="Amazon Linux"
+Amazon
+13:33:20
+107
+NAME="Amazon Linux"
+Amazon
+13:33:21
+107
+NAME="Amazon Linux"
+Amazon
+13:33:21
+107
+NAME="Amazon Linux"
+Amazon
+13:33:21
+107
+NAME="Amazon Linux"
+Amazon
+13:33:21
+107
+NAME="Amazon Linux"
+Amazon
+13:33:21
+107
+NAME="Amazon Linux"
+Amazon
+exit
