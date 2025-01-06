@@ -1,0 +1,57 @@
+[[ec2-user@ip-172-31-33-20 ~]$ cd /opt/081024_morning/dima2024
+[ec2-user@ip-172-31-33-20 dima2024]$ vim fullscript.sh
+[ec2-user@ip-172-31-33-20 dima2024]$ chmod +x fullscript.sh
+[ec2-user@ip-172-31-33-20 dima2024]$ ./fullscript.sh
+1 #!/bin/bash
+  2 echo "hello student"
+  3 echo -n "vvesti vashe imya: "
+  4 read NAME
+  5 echo "welkome to terminal $NAME"
+  6 mkdir -p /tmp/test1
+  7 touch /tmp/test1/mydate.txt
+  8 date +"%H:%M:%S:" > /tmp/test1/mydate.txt
+  9 echo "sohranyaem dannie"
+ 10 for run in {1..10}
+ 11 do
+ 12 echo $run
+ 13 sleep 0.5
+ 14 done
+ 15 echo "data saved. continue work"
+ 16 df -h >> /tmp/test1/mydate.txt
+ 17 mkdir -p /opt/mydate
+ 18 cp /tmp/test1/mydate.txt /opt/mydate/newmydate.txt
+ 19 for run in {1..5}
+ 20 do
+ 21 echo "well done boss"
+ 22 echo $run
+ 23 sleep 1
+ 24 done
+ 25
+~
+
+hello student
+vvesti vashe imya: dima
+welkome to terminal dima
+sohranyaem dannie
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+data saved. continue work
+well done boss
+1
+well done boss
+2
+well done boss
+3
+well done boss
+4
+well done boss
+5
+[ec2-user@ip-172-31-33-20 dima2024]$
